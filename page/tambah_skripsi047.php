@@ -16,7 +16,7 @@ hanya_admin();
 <?php
 include "config/koneksi.php";
 //kode otomatis
-$carikode = mysqli_query($conn, "select max(id_skripsi047) from skripsi047") or die(mysqli_error($conn));
+$carikode = mysqli_query($conn, "select max(id_skripsi047) from skripsi_047") or die(mysqli_error($conn));
 $datakode = mysqli_fetch_array($carikode);
 if ($datakode) {
     $nilaikode = substr($datakode[0], 2);
@@ -72,17 +72,17 @@ if (isset($_POST['tambah'])) {
 
                         <div class="form-group">
                         <label>Semester</label>
-                        <select name="semester" class="form-control">
-                            <option value="ganjil" <?=['semester081'] == 'ganjil' ? 'selected' : '' ?>>Ganjil</option>
-                            <option value="genap" <?= ['semester081'] == 'genap' ? 'selected' : '' ?>>Genap</option>
+                        <select name="semester047" class="form-control">
+                            <option value="ganjil" <?=['semester047'] == 'ganjil' ? 'selected' : '' ?>>Ganjil</option>
+                            <option value="genap" <?= ['semester047'] == 'genap' ? 'selected' : '' ?>>Genap</option>
                         </select>
                         </div>
 
                         <div class="form-group">
                         <label>Tahun Ajaran</label>
-                        <select name="thn_ajaran" class="form-control">
-                            <option value="2025/2026" <?= ['thn_ajaran081'] == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
-                            <option value="2026/2027" <?= ['thn_ajaran081'] == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
+                        <select name="thn_ajaran047" class="form-control">
+                            <option value="2025/2026" <?= ['thn_ajaran047'] == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
+                            <option value="2026/2027" <?= ['thn_ajaran047'] == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
                         </select>
                         </div>
 

@@ -27,7 +27,7 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
       <div class="card-body">
 
         <?php if (is_admin()) { ?>
-          <a href="index.php?page=skripsi_047" class="btn btn-primary btn-sm mb-3">
+          <a href="index.php?page=tambah_skripsi047" class="btn btn-primary btn-sm mb-3">
             Tambah Skripsi
           </a>
         <?php } ?>
@@ -66,26 +66,16 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
 
                 <?php if (is_admin()) { ?>
                   <td>
-                    <a href="index.php?page=kelas&action=hapus&kd=<?= $result['id_skripsi047'] ?>"
+                    <a href="index.php?page=skripsi_047&action=hapus&kd=<?= $result['id_skripsi047'] ?>"
                       onclick="return confirm('Yakin ingin hapus?')">
                       <span class="badge badge-danger">Hapus</span>
                     </a>
 
-                    <a href="index.php?page=edit_kelas&kd=<?= $result['judul_skripsi047'] ?>">
+                    <a href="index.php?page=edit_skripsi047&kd=<?= $result['judul_skripsi047'] ?>">
                       <span class="badge badge-warning">Edit</span>
                     </a>
 
-                    <a href="index.php?page=edit_kelas&kd=<?= $result['topik047'] ?>">
-                      <span class="badge badge-warning">Edit</span>
-                    </a>
-
-                    <a href="index.php?page=edit_kelas&kd=<?= $result['semester047'] ?>">
-                      <span class="badge badge-warning">Edit</span>
-                    </a>
-
-                    <a href="index.php?page=edit_kelas&kd=<?= $result['thn_ajaran047'] ?>">
-                      <span class="badge badge-warning">Edit</span>
-                    </a>
+                   
                   </td>
                 <?php } ?>
               </tr>
