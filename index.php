@@ -1,12 +1,10 @@
 <?php
 session_start();
+
 require_once "config/auth.php";
 cek_login();
 
-if (!isset($_SESSION['username'])) {
-  header("location:login.php");
-  exit;
-}
+include "page/middleware.php";
 
 $page = $_GET['page'] ?? '';
 ?>

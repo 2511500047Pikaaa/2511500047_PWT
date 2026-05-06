@@ -5,10 +5,9 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // CEK LOGIN
-function cek_login()
-{
+function cek_login() {
     if (!isset($_SESSION['username'])) {
-        header("Location: login.php");
+        header("location: login.php");
         exit;
     }
 }
