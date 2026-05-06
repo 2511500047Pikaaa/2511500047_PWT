@@ -71,15 +71,20 @@ if (isset($_POST['tambah'])) {
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Semester</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                        <label>Semester</label>
+                        <select name="semester" class="form-control">
+                            <option value="ganjil" <?=['semester081'] == 'ganjil' ? 'selected' : '' ?>>Ganjil</option>
+                            <option value="genap" <?= ['semester081'] == 'genap' ? 'selected' : '' ?>>Genap</option>
+                        </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Tahun Ajaran</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                        <label>Tahun Ajaran</label>
+                        <select name="thn_ajaran" class="form-control">
+                            <option value="2025/2026" <?= ['thn_ajaran081'] == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
+                            <option value="2026/2027" <?= ['thn_ajaran081'] == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
+                        </select>
                         </div>
-
 
                         <div class="card-footer">
                             <input type="submit" class="btn btn-primary" name="tambah" value="Simpan">
