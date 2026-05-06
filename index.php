@@ -177,6 +177,13 @@ Data Master
 </a>
 </li>
 
+<li class="nav-item">
+<a href="?page=detail_jadwal" class="nav-link <?=($page=='detail_jadwal'?'active':'')?>">
+<i class="far fa-circle nav-icon"></i>
+<p>Skripsi</p>
+</a>
+</li>
+
 </ul>
 </li>
 
