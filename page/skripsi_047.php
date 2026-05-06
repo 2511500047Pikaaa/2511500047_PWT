@@ -16,7 +16,7 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
 
   if ($query) {
     echo "<div class='alert alert-warning'>Berhasil Di Hapus</div>";
-    echo '<meta http-equiv="refresh" content="1;url=index.php?page=kelas">';
+    echo '<meta http-equiv="refresh" content="1;url=index.php?page=skripsi_047">';
   }
 }
 ?>
@@ -27,7 +27,7 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
       <div class="card-body">
 
         <?php if (is_admin()) { ?>
-          <a href="index.php?page=tambah_kelas" class="btn btn-primary btn-sm mb-3">
+          <a href="index.php?page=skripsi_047" class="btn btn-primary btn-sm mb-3">
             Tambah Skripsi
           </a>
         <?php } ?>

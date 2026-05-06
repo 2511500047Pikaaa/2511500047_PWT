@@ -33,7 +33,7 @@ if (isset($_POST['tambah'])) {
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h5><i class="icon fas fa-info"></i> Info </h5>
         <h4>Berhasil Disimpan</h4></div>';
-        echo '<meta http-equiv="refresh" content="1;url=index.php?page=mapel">';
+        echo '<meta http-equiv="refresh" content="1;url=index.php?page=skripsi_047">';
     } else {
         echo '<div class="alert alert-warning alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -50,33 +50,33 @@ if (isset($_POST['tambah'])) {
                 <div class="card-body p-2">
                     <form method="POST" action="">
                        <div class="form-group">
-                            <label for="id_kelas">ID Skripsi</label>
-                            <input type="text" name="id_kelas" placeholder="id Kelas" class="form-control">
+                            <label for="id_skripsi047">ID Skripsi</label>
+                            <input type="text" name="id_skripsi047" placeholder="ID Skripsi" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Judul Skripsi</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                            <label for="judul_skripsi047">Judul Skripsi</label>
+                            <input type="text" name="judul_skripsi047" id="judul_skripsi047" placeholder="Judul Skripsi" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Topik</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                            <label for="topik047">Topik</label>
+                            <input type="text" name="topik047" id="topik047" placeholder="Topik" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Semester</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                            <label for="semester047">Semester</label>
+                            <input type="text" name="semester047" id="semester047" placeholder="Semester" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="Nm_kelas">Tahun Ajaran</label>
-                            <input type="text" name="Nm_kelas" id="Nm_kelas" placeholder="Nama Kelas" class="form-control">
+                            <label for="thn_ajaran047">Tahun Ajaran</label>
+                            <input type="text" name="thn_ajaran047" id="thn_ajaran047" placeholder="Tahun Ajaran" class="form-control">
                         </div>
 
                         <div class="card-footer">
                             <input type="submit" class="btn btn-primary" name="tambah" value="Update">
-                            <a href="index.php?page=mapel" class="btn btn-secondary">
+                            <a href="index.php?page=skripsi_047" class="btn btn-secondary">
                                 Batal
                             </a>
                         </div>
