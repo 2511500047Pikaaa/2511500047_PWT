@@ -16,13 +16,18 @@ hanya_admin();
 <?php
 include "config/koneksi.php";
 //kode otomatis
-$carikode = mysqli_query($conn, "select max(id_skripsi047) from skripsi_047") or die(mysqli_error($conn));
+$carikode = mysqli_query($conn, "SELECT MAX(id_skripsi047) FROM skripsi_047") or die(mysqli_error($conn));
 $datakode = mysqli_fetch_array($carikode);
-if ($datakode) {
+
+if ($datakode[0] != null) {
     $nilaikode = substr($datakode[0], 2);
-    $kode = (int) $nilaikode;
-    $kode = $kode + 1;
+    $kode = (int)$nilaikode;
+    $kode++;
+} else {
+    $kode = 1;
 }
+
+$id_otomatis = "SK" . str_pad($kode, 3, "0", STR_PAD_LEFT);
 
 if (isset($_POST['tambah'])) {
     $id_skripsi047 = $_POST['id_skripsi047'];
@@ -57,7 +62,11 @@ if (isset($_POST['tambah'])) {
                     <form method="POST" action="">
                         <div class="form-group">
                             <label for="id_skripsi047">ID Skripsi</label>
-                            <input type="text" name="id_skripsi047" placeholder="ID Skripsi" class="form-control">
+                            <input type="text"
+                                name="id_skripsi047"
+                                value="<?= $id_otomatis; ?>"
+                                class="form-control"
+                                readonly>
                         </div>
 
                         <div class="form-group">
@@ -73,16 +82,16 @@ if (isset($_POST['tambah'])) {
                         <div class="form-group">
                         <label>Semester</label>
                         <select name="semester047" class="form-control">
-                            <option value="ganjil" <?=['semester047'] == 'ganjil' ? 'selected' : '' ?>>Ganjil</option>
-                            <option value="genap" <?= ['semester047'] == 'genap' ? 'selected' : '' ?>>Genap</option>
+                            <option value="ganjil">Ganjil</option>
+                            <option value="genap">Genap</option>
                         </select>
                         </div>
 
                         <div class="form-group">
                         <label>Tahun Ajaran</label>
                         <select name="thn_ajaran047" class="form-control">
-                            <option value="2025/2026" <?= ['thn_ajaran047'] == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
-                            <option value="2026/2027" <?= ['thn_ajaran047'] == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
+                           <option value="ganjil">2025/2026</option>
+                            <option value="genap">2026/2027</option>
                         </select>
                         </div>
 
