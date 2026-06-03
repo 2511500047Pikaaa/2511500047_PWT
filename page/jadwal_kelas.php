@@ -13,8 +13,7 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
 
     $kd = $_GET['kd'];
 
-    // FIX: pakai id_jadwal, bukan nis
-    $query = mysqli_query($conn, "DELETE FROM jadwal_kelas WHERE id_jadwal='$kd'");
+    $query = mysqli_query($conn, "DELETE FROM jadwal_kelas WHERE id_kelas='$kd'");
 
     if ($query) {
         echo "<div class='alert alert-warning'>Berhasil Di Hapus</div>";
@@ -41,7 +40,6 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID Jadwal</th>
                             <th>ID Kelas</th>
                             <th>Tahun Ajaran</th>
                             <th>Semester</th>
@@ -63,7 +61,6 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
                         ?>
                             <tr>
                                 <td><?= $no; ?></td>
-                                <td><?= $result['id_jadwal']; ?></td>
                                 <td><?= $result['id_kelas']; ?></td>
                                 <td><?= $result['thn_ajaran']; ?></td>
                                 <td><?= $result['semester']; ?></td>
@@ -72,12 +69,12 @@ if (isset($_GET['action']) && $_GET['action'] == "hapus") {
                                 <?php if (is_admin()) { ?>
                                     <td>
 
-                                        <a href="index.php?page=jadwal_kelas&action=hapus&kd=<?= $result['id_jadwal']; ?>"
+                                        <a href="index.php?page=jadwal_kelas&action=hapus&kd=<?= $result['id_kelas']; ?>"
                                             onclick="return confirm('Yakin ingin hapus?')">
                                             <span class="badge badge-danger">Hapus</span>
                                         </a>
 
-                                        <a href="index.php?page=edit_jadwal&kd=<?= $result['id_jadwal']; ?>">
+                                        <a href="index.php?page=edit_jadwal&kd=<?= $result['id_kelas']; ?>">
                                             <span class="badge badge-warning">Edit</span>
                                         </a>
 

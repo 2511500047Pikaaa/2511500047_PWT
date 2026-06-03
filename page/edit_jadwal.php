@@ -18,7 +18,7 @@ if (empty($kd)) {
     die("ID tidak ditemukan!");
 }
 
-$query = mysqli_query($conn, "SELECT * FROM jadwal_kelas WHERE id_jadwal='$kd'");
+$query = mysqli_query($conn, "SELECT * FROM jadwal_kelas WHERE id_kelas='$kd'");
 $data = mysqli_fetch_assoc($query);
 
 if (!$data) {
@@ -40,7 +40,7 @@ if (isset($_POST['update'])) {
             id_kelas='$id_kelas',
             thn_ajaran='$thn_ajaran',
             semester='$semester'
-            WHERE id_jadwal='$kd'
+            WHERE id_kelas='$kd'
         ");
 
         if ($update) {
@@ -69,7 +69,7 @@ if (isset($_POST['update'])) {
 
                     <div class="form-group">
                         <label>ID Jadwal</label>
-                        <input type="text" value="<?= $data['id_jadwal']; ?>" class="form-control" readonly>
+                        <input type="text" value="<?= $data['id_kelas']; ?>" class="form-control" readonly>
                     </div>
 
 
